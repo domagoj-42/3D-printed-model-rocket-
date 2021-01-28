@@ -21,7 +21,7 @@ Issues with current design:
 - insufficient ventilation in payload compartment for consistent temperature measurements
 - very high drift after integration
 
-Electronics information
+Electronic payload information
 - GY-87
 - Arduino Pro Mini from SparkFun
 - OpenLog from SparkFun
@@ -29,6 +29,7 @@ Electronics information
 - generic 90 mAh LiPo battery
 - electronics are seperated into 3 circular PCBs - the top one contains the OpenLog and serial wire breakouts that connect to the serial line. A 4-switch dip switch is present, 2 switches intersecting the serial line's connection to the OpenLog (you cannot upload via serial flasher and have OpenLog connected to the serial line, so this switch is used), and one switch connected to one of the battery's terminals. On the central board is the GY-87 module. On the bottom board is the Arduino Pro Mini and charge controler.
 - shematic.png contains the wiring diagram
+- in the existing design, a nylon standoff was added to prevent the SD card from getting bumped out (see shematic for details)
 
 Things to note:
 - config.txt is the config file for the OpenLog module, copy it to the SD card or change the baud rte on your config file to the appropriate one from the Arduino program
