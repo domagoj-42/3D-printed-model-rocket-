@@ -28,8 +28,9 @@ Electronics information
 - dd05cvsa_05 charge controller
 - generic 90 mAh LiPo battery
 - electronics are seperated into 3 circular PCBs - the top one contains the OpenLog and serial wire breakouts that connect to the serial line. A 4-switch dip switch is present, 2 switches intersecting the serial line's connection to the OpenLog (you cannot upload via serial flasher and have OpenLog connected to the serial line, so this switch is used), and one switch connected to one of the battery's terminals. On the central board is the GY-87 module. On the bottom board is the Arduino Pro Mini and charge controler.
-- !!!!!!!!!!!!!!!!!! WIRING DIAGRAM !!!!!!!!!!!!!!
+- shematic.png contains the wiring diagram
 
 Things to note:
 - config.txt is the config file for the OpenLog module, copy it to the SD card or change the baud rte on your config file to the appropriate one from the Arduino program
+
 
