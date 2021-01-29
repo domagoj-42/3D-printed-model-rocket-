@@ -13,8 +13,9 @@ Rocket Assembly Instructions:
 - the fueselage is glued to the engine assmebly
 - the parachute dimensions used for 143 grams: The radius of the vent hole is 4 cm, the length of the canopy is 19cm, and the length of the attachment section is 1cm. In total, the tarp has a 24cm radius, that is, a diameter of 48cm.
 - internally, a rope is used to connect the bottom of the payload compartment to the fuesalage, which connects to the parachute
-- you may wish to add insulation tape to the fueslage - payload compartment connection to increase friction
+- you may wish to add insulation tape to the fuselage - payload compartment connection to increase friction
 - payload and engine mounted, nose cone and engine cap screwed in
+- hot glue shout be applied to where the rope comes through the payload compartment to prevent the gasses venting through the holes.
 
 
 Issues with current design:
