@@ -133,6 +133,8 @@ highpass_cutoff = 1 #Hz cutoff frequency for highpass
 order = 5
 interval = 3
 starting_time = 30
+save_figure = True
+show_figure = False
 
 #for every file in directory
 for filename in os.listdir(location):
@@ -251,7 +253,10 @@ for filename in os.listdir(location):
         plt.plot(times, accel[1], label = "accelerometer y")
         plt.plot(times, accel[2], label = "accelerometer z")
         plt.legend(loc="upper left")
-        plt.show()
+        if save_figure == True: 
+            plt.savefig('output/accel_local.png', bbox_inches='tight')
+        if show_figure == True:
+            plt.show()
         
         #ACCELERATION GRAPH GLOBAL
         plt.figure()
@@ -262,7 +267,10 @@ for filename in os.listdir(location):
         plt.plot(times, accel_global[1], label = "accelerometer y")
         plt.plot(times, accel_global[2], label = "accelerometer z")
         plt.legend(loc="upper left")
-        plt.show()
+        if save_figure == True: 
+            plt.savefig('output/accel_global.png', bbox_inches='tight')
+        if show_figure == True:
+            plt.show()
         
         #ANGUALAR VELOCITY GRAPH
         plt.figure()
@@ -273,7 +281,10 @@ for filename in os.listdir(location):
         plt.plot(times, gyro[1], label = "gyroscope y")
         plt.plot(times, gyro[2], label = "gyroscope z")
         plt.legend(loc="upper left")
-        plt.show()
+        if save_figure == True: 
+            plt.savefig('output/angular_velocity.png', bbox_inches='tight')
+        if show_figure == True:
+            plt.show()
         
         #ROTATION GRAPH
         plt.figure()
@@ -284,7 +295,10 @@ for filename in os.listdir(location):
         plt.plot(times, gyro_angles[1], label = "gyroscope y")
         plt.plot(times, gyro_angles[2], label = "gyroscope z")
         plt.legend(loc="upper left")
-        plt.show()
+        if save_figure == True: 
+            plt.savefig('output/rotation.png', bbox_inches='tight')
+        if show_figure == True:
+            plt.show()
         
         #VELOCITY GRAPH LOCAL
         plt.figure()
@@ -295,7 +309,10 @@ for filename in os.listdir(location):
         plt.plot(times, velocity_local[1], label = "velocity y")
         plt.plot(times, velocity_local[2], label = "velocity z")
         plt.legend(loc="upper left")
-        plt.show()
+        if save_figure == True: 
+            plt.savefig('output/velocity_local.png', bbox_inches='tight')
+        if show_figure == True:
+            plt.show()
         
         #VELOCITY GRAPH LOCAL
         plt.figure()
@@ -306,7 +323,10 @@ for filename in os.listdir(location):
         plt.plot(times, velocity_global[1], label = "velocity y")
         plt.plot(times, velocity_global[2], label = "velocity z")
         plt.legend(loc="upper left")
-        plt.show()
+        if save_figure == True: 
+            plt.savefig('output/velocity_global.png', bbox_inches='tight')
+        if show_figure == True:
+            plt.show()
         
         #DISTANCES GRAPH 
         fig = plt.figure()
@@ -316,7 +336,10 @@ for filename in os.listdir(location):
         ax.set_ylabel('Y distance')
         ax.set_zlabel('Z distance')
         ax.plot(distances_global[0], distances_global[1], distances_global[2])
-        plt.show()
+        if save_figure == True: 
+            plt.savefig('output/rocket_path_global.png', bbox_inches='tight')
+        if show_figure == True:
+            plt.show()
         
         #DISTANCES GRAPH 
         fig = plt.figure()
@@ -326,7 +349,10 @@ for filename in os.listdir(location):
         ax.set_ylabel('Y distance')
         ax.set_zlabel('Z distance')
         ax.plot(distances_local[0], distances_local[1], distances_local[2])
-        plt.show()
+        if save_figure == True: 
+            plt.savefig('output/rocket_path_local.png', bbox_inches='tight')
+        if show_figure == True:    
+            plt.show()
         
         #temp/press
         fig, ax1 = plt.subplots()
@@ -340,7 +366,10 @@ for filename in os.listdir(location):
         ax2.plot(times, temp, color = 'tab:red')
         ax2.tick_params(axis='y', labelcolor = 'tab:red')
         fig.tight_layout()
-        plt.show()
+        if save_figure == True: 
+            plt.savefig('output/temp_press.png', bbox_inches='tight')
+        if show_figure == True:
+            plt.show()
         
         #DISTANCES GRAPH 
         fig = plt.figure()
@@ -350,7 +379,10 @@ for filename in os.listdir(location):
         ax.set_ylabel('Y distance')
         ax.set_zlabel('Z distance')
         ax.plot(distances_local[0], distances_local[1], distances_local[2])
-        plt.show()
+        if save_figure == True: 
+            plt.savefig('output/distances_local.png', bbox_inches='tight')
+        if show_figure == True:
+            plt.show()
         
         #ALTITUDE
         plt.figure()
@@ -359,7 +391,10 @@ for filename in os.listdir(location):
         plt.ylabel("Altitude/m")
         plt.plot(times, alt)
         plt.legend(loc="upper left")
-        plt.show()
+        if save_figure == True: 
+            plt.savefig('output/altitude.png', bbox_inches='tight')
+        if show_figure == True:
+            plt.show()
         
         #local Z acceleration
         plt.figure()
@@ -368,16 +403,22 @@ for filename in os.listdir(location):
         plt.ylabel("Acceleration/m")
         plt.plot(times, accel[2])
         plt.legend(loc="upper left")
-        plt.show()
+        if save_figure == True: 
+            plt.savefig('output/accel_vertical_local.png', bbox_inches='tight')
+        if show_figure == True:
+            plt.show()
         
-        #local Z acceleration
+        #global Z acceleration
         plt.figure()
         plt.title("Vertical acceleration in global frame of reference")
         plt.xlabel("Time/s")
         plt.ylabel("Acceleration/m")
         plt.plot(times, accel_global[2])
         plt.legend(loc="upper left")
-        plt.show()
+        if save_figure == True: 
+            plt.savefig('output/accel_vertical_global.png', bbox_inches='tight')
+        if show_figure == True:    
+            plt.show()
         
         #global Z displacement
         plt.figure()
@@ -386,7 +427,10 @@ for filename in os.listdir(location):
         plt.ylabel("Displacement/m")
         plt.plot(times, distances_global[2])
         plt.legend(loc="upper left")
-        plt.show()
+        if save_figure == True: 
+            plt.savefig('output/vertical_displacement_global.png', bbox_inches='tight')
+        if show_figure == True:
+            plt.show()
         
         """
         #read magnetometer
